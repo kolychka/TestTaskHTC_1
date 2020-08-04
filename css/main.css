@@ -1,0 +1,156 @@
+.field {
+    font-family: "Arial";
+    margin: auto;
+    background: rgb(224, 224, 224);
+    width: max-content;
+    padding: 50px 50px 60px 50px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    color: #ffffff;
+    background: linear-gradient(to bottom, #0684b4, #1e69ac);
+    margin-right: 10px;
+    padding: 8px 16px;
+    border-radius: 5px 5px 0 0;
+}
+li.active {
+    color: #000000;
+    background: #ffffff;
+    box-shadow: -1px -1px 1px 0 #bababa,
+    1px -1px 1px 0 #bababa;
+}
+li:hover {
+    background-color: #eee;
+}
+
+.invisible {
+    display: none;
+}
+.visible {
+    display: block;
+    width: 450px;
+    padding: 15px 0 50px 0;
+    background: white;
+    box-shadow: 0 1px 1px 1px #bababa;
+    border-radius: 0 5px 5px 5px;
+}
+
+.profile {
+    font-size: 12px;
+}
+
+.profile-interaction {
+    float: left;
+    margin-left: 15px;
+    margin-right: 20px;
+}
+
+.profile-information {
+    margin-right: 20px;
+    padding: 4px 0;
+}
+
+button {
+    margin: 6px 0;
+}
+
+.user-photo {
+    height: 169px;
+    width: 132px;
+    background-image: url("../images/cat1.png");
+    border-radius: 3px;
+    box-shadow: inset 0 0 1px 0 #bababa;
+}
+
+.add-friend {
+    height: 30px;
+    width: 132px;
+    color: #ffffff;
+    background: linear-gradient(to bottom, #e78101, #e75200);
+    box-shadow: 0 1px 1px 1px #bababa;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.add-friend:hover {
+    background: #e78101;
+}
+
+.add-friend:active {
+    box-shadow: 0 1px 1px 1px #cbcbcb;
+    background: linear-gradient(to bottom, #e75200, #e78101);
+}
+
+.add-friend:active, .add-friend:focus {
+    outline-style: none;
+}
+
+.user-name {
+    font-size: 24px;
+}
+
+.user-hometown {
+    color: #bababa;
+}
+
+.user-info {
+    display: flex;
+    margin-top: 24px;
+    margin-right: 56px;
+}
+
+.user-info-field {
+    margin-right: 28px;
+}
+
+.user-info-text, .user-text {
+    font-weight: bold;
+}
+
+.user-text {
+    margin-top: 21px;
+}
+
+.user-e-mail {
+    text-decoration: underline;
+    color: #1675af;
+}
+
+.user-info-data {
+    margin-bottom: 10px;
+    width: max-content;
+}
+
+.user-hobby {
+    display: flex;
+    margin-top: 6px;
+}
+
+.user-hobby-elem {
+    color: #1675af;
+    background: #ffffff;
+    border: 1px solid #d5d5d5;
+    border-radius: 2px;
+    margin-right: 3px;
+    padding: 5px 9px;
+    font-size: 12px;
+}
+
+.user-hobby-elem:hover {
+    color: #000000;
+    background: #f3f3f3;
+    cursor: pointer;
+}
