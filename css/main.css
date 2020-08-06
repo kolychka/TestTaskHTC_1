@@ -6,7 +6,7 @@
     padding: 50px 50px 60px 50px;
 }
 
-ul {
+div ul {
     list-style: none;
     margin: 0;
     padding-left: 0;
@@ -14,11 +14,7 @@ ul {
     font-size: 14px;
 }
 
-a {
-    text-decoration: none;
-}
-
-li {
+ul li {
     color: #ffffff;
     background: linear-gradient(to bottom, #0684b4, #1e69ac);
     margin-right: 10px;
@@ -40,8 +36,10 @@ li:hover {
 }
 .visible {
     display: block;
-    width: 450px;
-    padding: 15px 0 50px 0;
+    /*width: 487px;*/
+    width: 437px;
+    height: 250px;
+    padding: 15px 10px 15px 15px;
     background: white;
     box-shadow: 0 1px 1px 1px #bababa;
     border-radius: 0 5px 5px 5px;
@@ -53,7 +51,6 @@ li:hover {
 
 .profile-interaction {
     float: left;
-    margin-left: 15px;
     margin-right: 20px;
 }
 
@@ -69,7 +66,8 @@ button {
 .user-photo {
     height: 169px;
     width: 132px;
-    background-image: url("../images/cat1.png");
+    background-image: url("../images/vitalya-gora.png");
+    background-repeat: no-repeat;
     border-radius: 3px;
     box-shadow: inset 0 0 1px 0 #bababa;
 }
@@ -153,4 +151,70 @@ button {
     color: #000000;
     background: #f3f3f3;
     cursor: pointer;
+}
+
+
+
+.friends {
+    font-size: 12px;
+    padding-right: 10px;
+}
+
+.friends-list {
+    float: left;
+    width: 410px;
+}
+
+.friend-item {
+    float: left;
+    box-sizing: border-box;
+    width: 205px;
+    height: max-content;
+    margin-bottom: 31px;
+}
+
+.friend-item a {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #1675af;
+    height: 16px;
+}
+
+.friend-hometown {
+    margin-top: 4px;
+    font-size: 11px;
+    height: 30px;
+}
+
+.friend-item img {
+    float: left;
+    width: 62px;
+    height: 62px;
+    background-repeat: no-repeat;
+    margin-right: 15px;
+    border-radius: 3px;
+    border: none;
+}
+#photo1 { background-image: url("../images/lew-bronstein.jpg"); }
+#photo2 { background-image: url("../images/nachodka-kapital.jpg"); }
+#photo3 { background-image: url("../images/yandex-petrenko.jpg"); }
+#photo4 { background-image: url("../images/uspech-vosmozhnostey.jpg"); }
+#photo5 { background-image: url("../images/inna-nashlas.jpg"); }
+#photo6 { background-image: url("../images/alla-podolskaya.jpg"); }
+
+.friend-status {
+    visibility: hidden;
+}
+.friend-status-online {
+    visibility: visible;
+    font-size: 10px;
+    color: #6da566;
+    font-style: italic;
+}
+
+.scrollbar {
+    float: right;
+    width: 5px;
+    height: inherit;
+    background: #e75200;
 }
