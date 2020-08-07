@@ -59,6 +59,8 @@ li:hover {
     padding: 4px 0;
 }
 
+
+
 button {
     margin: 6px 0;
 }
@@ -158,11 +160,25 @@ button {
 .friends {
     font-size: 12px;
     padding-right: 10px;
+    /*overflow-y: scroll;*/
 }
 
 .friends-list {
     float: left;
-    width: 410px;
+    width: 435px;
+    height: inherit;
+    overflow-y: scroll;
+}
+.friends-list::-webkit-scrollbar {
+    /* 1 - скроллбар */
+    background: #ededed;
+    width: 5px;
+    border-radius: 3px;
+}
+.friends-list::-webkit-scrollbar-thumb {
+    /* 5 - ползунок */
+    background: #1e69ac;
+    border-radius: 3px;
 }
 
 .friend-item {
@@ -195,12 +211,6 @@ button {
     border-radius: 3px;
     border: none;
 }
-#photo1 { background-image: url("../images/lew-bronstein.jpg"); }
-#photo2 { background-image: url("../images/nachodka-kapital.jpg"); }
-#photo3 { background-image: url("../images/yandex-petrenko.jpg"); }
-#photo4 { background-image: url("../images/uspech-vosmozhnostey.jpg"); }
-#photo5 { background-image: url("../images/inna-nashlas.jpg"); }
-#photo6 { background-image: url("../images/alla-podolskaya.jpg"); }
 
 .friend-status {
     visibility: hidden;
@@ -210,11 +220,4 @@ button {
     font-size: 10px;
     color: #6da566;
     font-style: italic;
-}
-
-.scrollbar {
-    float: right;
-    width: 5px;
-    height: inherit;
-    background: #e75200;
 }

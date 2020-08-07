@@ -43,10 +43,19 @@
       <workItem from="1596620499136" duration="2773000" />
       <workItem from="1596625338957" duration="10949000" />
       <workItem from="1596703267798" duration="4344000" />
+      <workItem from="1596712303518" duration="1135000" />
+      <workItem from="1596808692284" duration="13000" />
+      <workItem from="1596809861241" duration="5487000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1596811598347">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1596811598347" />
   </component>
 </project>
