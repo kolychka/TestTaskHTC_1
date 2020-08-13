@@ -4,163 +4,24 @@
     <meta charset="UTF-8">
     <title>Профиль Виталя Гора</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/data.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
-    <div class="field">
-        <div>
-            <ul>
-                <li id="profile" data-profile-item="profile" class="menu-item active"><a>Профиль</a></li>
-                <li id="friends" data-profile-item="friends" class="menu-item"><a>Друзья пользователя</a></li>
+    <div class="background-block">
+        <nav>
+            <ul class="menu">
+                <li id="profile" data-profile-item="profile" class="menu__item active"><a>Профиль</a></li>
+                <li id="friends" data-profile-item="friends" class="menu__item"><a>Друзья пользователя</a></li>
             </ul>
-            <div>
-                <div class="profile data-item visible">
-                    <div class="profile-interaction">
-                        <div class="user-photo"></div>
-                        <button class="add-friend">Добавить в друзья</button>
-                    </div>
-                    <div class="profile-information">
-                        <div>
-                            <div class="user-name">Виталя Гора</div>
-                            <div class="user-hometown">г. Нижние Шахты</div>
-                        </div>
-                        <div class="user-info">
-                            <div class="user-info-field">
-                                <div class="user-info-data user-info-text">Семейное положение</div>
-                                <div class="user-info-data user-info-text">Телефон</div>
-                                <div class="user-info-data user-info-text">E-mail</div>
-                            </div>
-                            <div>
-                                <div class="user-info-data">холост</div>
-                                <div class="user-info-data">+7 (440) 554-32-12</div>
-                                <div class="user-info-data"><a href="mailto:vitalya@gora.ru" class="user-e-mail">vitalya@gora.ru</a></div>
-                            </div>
-                        </div>
-                        <div class="user-text">Интересы</div>
-                        <div class="user-hobby">
-                            <div class="user-hobby-elem">музыка</div>
-                            <div class="user-hobby-elem">компьютеры</div>
-                            <div class="user-hobby-elem">радио</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="friends data-item invisible">
-                    <div class="friends-list">
-                        <div class="friend-item">
-                            <img src="images/lew-bronstein.jpg" alt="Фотография пользователя: Лев Бронштейн">
-                            <a>Лев Бронштейн</a>
-                            <div class="friend-hometown">г. Ханты-Мансийск</div>
-                            <div class="friend-status-online">Online</div>
-                        </div>
-                        <div class="friend-item">
-                            <img src="images/nachodka-kapital.jpg" alt="Фотография пользователя: Находка Капитал">
-                            <a>Находка Капитал</a>
-                            <div class="friend-hometown">г. Усть-Бельск</div>
-                            <div class="friend-status">Online</div>
-                        </div>
-                        <div class="friend-item">
-                            <img src="images/yandex-petrenko.jpg" alt="Фотография пользователя: Яндекс Петренко">
-                            <a>Яндекс Петренко</a>
-                            <div class="friend-hometown">г. Пермь</div>
-                            <div class="friend-status">Online</div>
-                        </div>
-                        <div class="friend-item">
-                            <img src="images/uspech-vosmozhnostey.jpg" alt="Фотография пользователя: Успех Возможностей">
-                            <a>Успех Возможностей</a>
-                            <div class="friend-hometown">г. Радонеж</div>
-                            <div class="friend-status-online">Online</div>
-                        </div>
-                        <div class="friend-item">
-                            <img src="images/inna-nashlas.jpg" alt="Фотография пользователя: Инна Нашлась">
-                            <a>Инна Нашлась</a>
-                            <div class="friend-hometown">г. Омск</div>
-                            <div class="friend-status-online">Online</div>
-                        </div>
-                        <div class="friend-item">
-                            <img src="images/alla-podolskaya.jpg" alt="Фотография пользователя: Алла Подольская">
-                            <a>Алла Подольская</a>
-                            <div class="friend-hometown">г. Петропавловск-Камчатский</div>
-                            <div class="friend-status-online">Online</div>
-                        </div>
-
-                        <!-- Дублирование элементов friend-item для проверки работы скроллбара. -->
-                        <div>
-                            <div class="friend-item">
-                                <img src="images/lew-bronstein.jpg" alt="Фотография пользователя: Лев Бронштейн">
-                                <a>Лев Бронштейн</a>
-                                <div class="friend-hometown">г. Ханты-Мансийск</div>
-                                <div class="friend-status-online">Online</div>
-                            </div>
-                            <div class="friend-item">
-                                <img src="images/nachodka-kapital.jpg" alt="Фотография пользователя: Находка Капитал">
-                                <a>Находка Капитал</a>
-                                <div class="friend-hometown">г. Усть-Бельск</div>
-                                <div class="friend-status">Online</div>
-                            </div>
-                            <div class="friend-item">
-                                <img src="images/yandex-petrenko.jpg" alt="Фотография пользователя: Яндекс Петренко">
-                                <a>Яндекс Петренко</a>
-                                <div class="friend-hometown">г. Пермь</div>
-                                <div class="friend-status">Online</div>
-                            </div>
-                            <div class="friend-item">
-                                <img src="images/uspech-vosmozhnostey.jpg" alt="Фотография пользователя: Успех Возможностей">
-                                <a>Успех Возможностей</a>
-                                <div class="friend-hometown">г. Радонеж</div>
-                                <div class="friend-status-online">Online</div>
-                            </div>
-                            <div class="friend-item">
-                                <img src="images/inna-nashlas.jpg" alt="Фотография пользователя: Инна Нашлась">
-                                <a>Инна Нашлась</a>
-                                <div class="friend-hometown">г. Омск</div>
-                                <div class="friend-status-online">Online</div>
-                            </div>
-                            <div class="friend-item">
-                                <img src="images/alla-podolskaya.jpg" alt="Фотография пользователя: Алла Подольская">
-                                <a>Алла Подольская</a>
-                                <div class="friend-hometown">г. Петропавловск-Камчатский</div>
-                                <div class="friend-status-online">Online</div>
-                            </div>
-                            <div class="friend-item">
-                                <img src="images/lew-bronstein.jpg" alt="Фотография пользователя: Лев Бронштейн">
-                                <a>Лев Бронштейн</a>
-                                <div class="friend-hometown">г. Ханты-Мансийск</div>
-                                <div class="friend-status-online">Online</div>
-                            </div>
-                            <div class="friend-item">
-                                <img src="images/nachodka-kapital.jpg" alt="Фотография пользователя: Находка Капитал">
-                                <a>Находка Капитал</a>
-                                <div class="friend-hometown">г. Усть-Бельск</div>
-                                <div class="friend-status">Online</div>
-                            </div>
-                            <div class="friend-item">
-                                <img src="images/yandex-petrenko.jpg" alt="Фотография пользователя: Яндекс Петренко">
-                                <a>Яндекс Петренко</a>
-                                <div class="friend-hometown">г. Пермь</div>
-                                <div class="friend-status">Online</div>
-                            </div>
-                            <div class="friend-item">
-                                <img src="images/uspech-vosmozhnostey.jpg" alt="Фотография пользователя: Успех Возможностей">
-                                <a>Успех Возможностей</a>
-                                <div class="friend-hometown">г. Радонеж</div>
-                                <div class="friend-status-online">Online</div>
-                            </div>
-                            <div class="friend-item">
-                                <img src="images/inna-nashlas.jpg" alt="Фотография пользователя: Инна Нашлась">
-                                <a>Инна Нашлась</a>
-                                <div class="friend-hometown">г. Омск</div>
-                                <div class="friend-status-online">Online</div>
-                            </div>
-                            <div class="friend-item">
-                                <img src="images/alla-podolskaya.jpg" alt="Фотография пользователя: Алла Подольская">
-                                <a>Алла Подольская</a>
-                                <div class="friend-hometown">г. Петропавловск-Камчатский</div>
-                                <div class="friend-status-online">Online</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </nav>
+        <div class="profile data__item visible">
+            <div id="profile__interaction" class="profile__interaction"></div>
+            <div id="profile__information" class="profile__information"></div>
+            <div id="profile__personal-data" class="profile__personal-data"></div>
+        </div>
+        <div class="friends data__item invisible">
+            <div id="friends-list" class="friends-list"></div>
         </div>
     </div>
 </body>

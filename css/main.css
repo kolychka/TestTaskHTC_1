@@ -1,42 +1,58 @@
-.field {
-    font-family: "Arial";
-    margin: auto;
-    background: rgb(224, 224, 224);
+.background-block {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
     width: max-content;
+    background: #e3e3e3;
+    margin: auto;
     padding: 50px 50px 60px 50px;
 }
 
-div ul {
+.button {
+    outline-style: none;
+}
+.text_font-bold {
+    font-weight: bold;
+}
+.link {
+    color: #1675af;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.photo {
+    background-repeat: no-repeat;
+}
+
+.menu {
+    display: flex;
+    font-size: 14px;
     list-style: none;
     margin: 0;
     padding-left: 0;
-    display: flex;
-    font-size: 14px;
 }
 
-ul li {
+.menu__item {
     color: #ffffff;
-    background: linear-gradient(to bottom, #0684b4, #1e69ac);
+    background: linear-gradient(to bottom, #0785b5, #1e69ac);
     margin-right: 10px;
     padding: 8px 16px;
     border-radius: 5px 5px 0 0;
 }
-li.active {
+.menu__item:hover {
+    background-color: #eee;
+}
+.active {
     color: #000000;
     background: #ffffff;
     box-shadow: -1px -1px 1px 0 #bababa,
-    1px -1px 1px 0 #bababa;
-}
-li:hover {
-    background-color: #eee;
+                 1px -1px 1px 0 #bababa;
 }
 
 .invisible {
     display: none;
 }
+
 .visible {
     display: block;
-    /*width: 487px;*/
     width: 437px;
     height: 250px;
     padding: 15px 10px 15px 15px;
@@ -45,129 +61,104 @@ li:hover {
     border-radius: 0 5px 5px 5px;
 }
 
-.profile {
-    font-size: 12px;
-}
-
-.profile-interaction {
+.profile__interaction {
     float: left;
     margin-right: 20px;
 }
 
-.profile-information {
-    margin-right: 20px;
-    padding: 4px 0;
-}
-
-
-
-button {
-    margin: 6px 0;
-}
-
-.user-photo {
+.profile__photo {
+    display: block;
     height: 169px;
     width: 132px;
-    background-image: url("../images/vitalya-gora.png");
-    background-repeat: no-repeat;
     border-radius: 3px;
     box-shadow: inset 0 0 1px 0 #bababa;
 }
 
-.add-friend {
+.profile__button {
     height: 30px;
     width: 132px;
+    cursor: pointer;
     color: #ffffff;
-    background: linear-gradient(to bottom, #e78101, #e75200);
-    box-shadow: 0 1px 1px 1px #bababa;
     border: none;
     border-radius: 3px;
-    cursor: pointer;
+    margin: 6px 0;
+    background: linear-gradient(to bottom, #e78101, #e75200);
+    box-shadow: 0 1px 1px 1px #bababa;
 }
-
-.add-friend:hover {
+.profile__button:hover {
     background: #e78101;
 }
-
-.add-friend:active {
+.profile__button:active {
     box-shadow: 0 1px 1px 1px #cbcbcb;
     background: linear-gradient(to bottom, #e75200, #e78101);
 }
 
-.add-friend:active, .add-friend:focus {
-    outline-style: none;
+.profile__information {
+    float: right;
+    width: 285px;
+    padding: 4px 0;
 }
 
-.user-name {
+.profile__username {
+    display: block;
     font-size: 24px;
 }
 
-.user-hometown {
+.profile_color_gray {
     color: #bababa;
+    padding-top: 4px;
 }
 
-.user-info {
-    display: flex;
-    margin-top: 24px;
-    margin-right: 56px;
-}
-
-.user-info-field {
-    margin-right: 28px;
-}
-
-.user-info-text, .user-text {
-    font-weight: bold;
-}
-
-.user-text {
-    margin-top: 21px;
-}
-
-.user-e-mail {
-    text-decoration: underline;
-    color: #1675af;
-}
-
-.user-info-data {
-    margin-bottom: 10px;
+.profile__personal-data {
+    float: left;
     width: max-content;
+    height: max-content;
 }
 
-.user-hobby {
-    display: flex;
-    margin-top: 6px;
+.main-section {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: max-content max-content;
+    padding-bottom: 10px;
+}
+.sub-section_item {
+    margin: 10px 20px 10px 0;
+}
+.sub-section_margin-vertical {
+    margin: 10px 0;
 }
 
-.user-hobby-elem {
+.hobby {
+    margin: 6px 0;
+}
+
+.interest {
     color: #1675af;
     background: #ffffff;
     border: 1px solid #d5d5d5;
     border-radius: 2px;
     margin-right: 3px;
     padding: 5px 9px;
-    font-size: 12px;
 }
-
-.user-hobby-elem:hover {
+.interest:hover {
+    cursor: pointer;
     color: #000000;
     background: #f3f3f3;
-    cursor: pointer;
+}
+.interest:focus {
+    outline: none;
 }
 
-
-
-.friends {
-    font-size: 12px;
-    padding-right: 10px;
-    /*overflow-y: scroll;*/
+.form-input_size {
+    width: 100px;
+    height: 18px;
 }
 
 .friends-list {
     float: left;
+    overflow-y: scroll;
     width: 435px;
     height: inherit;
-    overflow-y: scroll;
 }
 .friends-list::-webkit-scrollbar {
     /* 1 - скроллбар */
@@ -181,43 +172,32 @@ button {
     border-radius: 3px;
 }
 
-.friend-item {
+.friends-list-item {
     float: left;
-    box-sizing: border-box;
     width: 205px;
-    height: max-content;
     margin-bottom: 31px;
 }
-
-.friend-item a {
-    text-decoration: underline;
-    font-weight: bold;
-    color: #1675af;
-    height: 16px;
-}
-
-.friend-hometown {
-    margin-top: 4px;
-    font-size: 11px;
-    height: 30px;
-}
-
-.friend-item img {
+.friends-list-item__photo {
     float: left;
+    border-radius: 3px;
     width: 62px;
     height: 62px;
-    background-repeat: no-repeat;
     margin-right: 15px;
-    border-radius: 3px;
-    border: none;
 }
 
-.friend-status {
-    visibility: hidden;
+.friends-list-item__name {
+    height: 16px;
+    font-weight: bold;
 }
-.friend-status-online {
-    visibility: visible;
+
+.friends-list-item__hometown {
+    height: 30px;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.friends-list-item__status {
     font-size: 10px;
-    color: #6da566;
     font-style: italic;
+    color: #6da566;
 }

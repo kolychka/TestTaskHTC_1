@@ -11,8 +11,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -46,6 +46,17 @@
       <workItem from="1596712303518" duration="1135000" />
       <workItem from="1596808692284" duration="13000" />
       <workItem from="1596809861241" duration="5487000" />
+      <workItem from="1596950802511" duration="2413000" />
+      <workItem from="1596984912363" duration="610000" />
+      <workItem from="1597034392646" duration="6803000" />
+      <workItem from="1597043837478" duration="639000" />
+      <workItem from="1597062206584" duration="20326000" />
+      <workItem from="1597225394570" duration="597000" />
+      <workItem from="1597229426840" duration="6794000" />
+      <workItem from="1597250700366" duration="2254000" />
+      <workItem from="1597302856031" duration="11380000" />
+      <workItem from="1597314331828" duration="22000" />
+      <workItem from="1597314578461" duration="84000" />
     </task>
     <servers />
   </component>
@@ -53,9 +64,13 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1596811598347">
+    <state x="389" y="0" width="587" height="728" key="find.popup" timestamp="1597232023600">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1596811598347" />
+    <state x="389" y="0" width="587" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1597232023600" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1597304410686">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1597304410686" />
   </component>
 </project>
