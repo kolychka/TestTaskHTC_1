@@ -11,41 +11,41 @@ const PROFILE_DATA = {
     hobby3: "радио"
 };
 
-const FRIENDS_DATA = {
-    0: {
+const FRIENDS_DATA = [
+    {
         img: "lew-bronstein.jpg",
         name: "Лев Бронштейн",
         hometown: "г. Ханты-Мансийск",
         status: "Online"
     },
-    1: {
+    {
         img: "nachodka-kapital.jpg",
         name: "Находка Капитал",
         hometown: "г. Усть-Бельск",
         status: ""
     },
-    2: {
+    {
         img: "yandex-petrenko.jpg",
         name: "Яндекс Петренко",
         hometown: "г. Пермь",
         status: ""
     },
-    3: {
+    {
         img: "uspech-vosmozhnostey.jpg",
         name: "Успех Возможностей",
         hometown: "г. Радонеж",
         status: "Online"
     },
-    4: {
+    {
         img: "inna-nashlas.jpg",
         name: "Инна Нашлась",
         hometown: "г. Омск",
         status: "Online"
     },
-    5: {
+    {
         img: "alla-podolskaya.jpg",
         name: "Алла Подольская",
         hometown: "г. Петропавловск-Камчатский",
         status: "Online"
     }
-};
+];
