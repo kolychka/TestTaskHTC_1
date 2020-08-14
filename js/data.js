@@ -5,11 +5,13 @@ const PROFILE_DATA = {
     maritalStatus: "холост",
     phoneNumber: "+7 (440) 554-32-12",
     eMail: "vitalya@gora.ru",
-
-    hobby1: "музыка",
-    hobby2: "компьютеры",
-    hobby3: "радио"
 };
+
+const HOBBY_DATA = [
+    "радио",
+    "компьютеры",
+    "музыка"
+];
 
 const FRIENDS_DATA = [
     {

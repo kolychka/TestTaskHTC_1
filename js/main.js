@@ -69,6 +69,31 @@ window.onload = function() {
     FRIENDS_DATA.forEach(el => friendsList.innerHTML += friendsListItem(el));
     // For the scrollbar view. Эта мерзка небогоугодная вещь написана для того, чтобы показать красоту скроллбара.
     friendsList.innerHTML += friendsList.innerHTML + friendsList.innerHTML;
+
+    // Проверяем: существует ли элемент. Если нет, то создаём его.
+    profilePersonalData.contains(document.getElementById('#hobby')) ?
+        document.getElementById('#hobby') :
+        profilePersonalData.innerHTML += '<div id="hobby" class="hobby"></div>';
+    // переворачиваем массив
+    HOBBY_DATA.reverse();
+    // наполняем элемент
+    const hobby = document.querySelector('.hobby');
+    HOBBY_DATA.forEach(elem => hobby.innerHTML += hobbyElem(elem));
+
+
+    let form = document.querySelector('#form-hobby');
+    let formInput = document.querySelector('.form-input');
+    let formButton = document.querySelector('#form-hobby__button');
+    formInput.onchange = () => {
+        if (formInput.value !== "") {
+            console.log(`i'm here`);
+            return true;
+        }
+    };
+    formButton.onclick = event => {
+        event.preventDefault();
+        console.log(formInput.value);
+    }
 }
 
 

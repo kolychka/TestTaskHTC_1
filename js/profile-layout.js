@@ -17,12 +17,10 @@ const profilePersonalDataElem = () => `<section class="main-section">
             </section>
         </section>
         <label class=" text_font-bold">Интересы</label>
-        <div class="hobby">
-            <button class="button interest">${PROFILE_DATA.hobby1}</button>
-            <button class="button interest">${PROFILE_DATA.hobby2}</button>
-            <button class="button interest">${PROFILE_DATA.hobby3}</button>
-        </div>
+        <div id="hobby" class="hobby"></div>
         <form id="form-hobby">
             <label><input type="text" class="form-input form-input_size interest"></label>
-            <button id="form-hobby__button" class="button profile__button">Добавить интерес</button>
+            <button id="form-hobby__button" class="button profile__button" type="submit">Добавить интерес</button>
         </form>`;
+
+const hobbyElem = elem => `<button class="button interest">${elem}</button>`;
