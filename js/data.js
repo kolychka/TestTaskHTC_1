@@ -8,9 +8,9 @@ const PROFILE_DATA = {
 };
 
 const HOBBY_DATA = [
-    "радио",
+    "музыка",
     "компьютеры",
-    "музыка"
+    "радио"
 ];
 
 const FRIENDS_DATA = [

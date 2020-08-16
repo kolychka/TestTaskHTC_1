@@ -5,8 +5,8 @@ window.onload = function() {
     const MENU_ITEM_SELECTOR = '.menu__item';
     const DATA_ITEM_SELECTOR = '.data__item';
 
-    const menuItems = document.querySelectorAll(MENU_ITEM_SELECTOR); // элементы меню
-    const dataItems = document.querySelectorAll(DATA_ITEM_SELECTOR); // внутренности вкладок
+    const menuItems = document.querySelectorAll(MENU_ITEM_SELECTOR);
+    const dataItems = document.querySelectorAll(DATA_ITEM_SELECTOR);
     menuItems.forEach(item => {
         item.onclick = function() { // чтобы не потерять контекст, НЕ используем стрелочную функцию
             // переключаем вкладки
@@ -24,76 +24,70 @@ window.onload = function() {
         }
     });
 
-
-    const profile = document.querySelector('.profile');
-    // Проверяем: существует ли элемент. Если нет, то создаём его.
-    profile.contains(document.getElementById('profile__interaction')) ?
-        document.getElementById('profile__interaction') :
-        profile.innerHTML += `<div id="profile__interaction" class="profile__interaction"></div>`;
-    // берём элемент
-    const profileInteraction = document.getElementById('profile__interaction');
-    // вставляем profileInteraction в начало profile
-    profile.prepend(profileInteraction);
-    // наполняем элемент
-    profileInteraction.innerHTML += profileInteractionElem();
-
-    // Проверяем: существует ли элемент. Если нет, то создаём его.
-    profile.contains(document.getElementById('profile__information')) ?
-        document.getElementById('profile__information') :
-        profile.innerHTML += `<div id="profile__information" class="profile__information"></div>`;
-    // наполняем элемент
-    const profileInformation = document.getElementById('profile__information');
-    // addProfileInformation(profileInformation);
-    profileInformation.innerHTML += profileInformationElem();
-
-    // Проверяем: существует ли элемент. Если нет, то создаём его.
-    profile.contains(document.getElementById('profile__personal-data')) ?
-        document.getElementById('profile__personal-data') :
-        profile.innerHTML += `<div id="profile__personal-data" class="profile__personal-data"></div>`;
-    // берём элемент
+    document.getElementById('profile__interaction').innerHTML = profileInteractionElem();
+    document.getElementById('profile__information').innerHTML = profileInformationElem();
     const profilePersonalData = document.getElementById('profile__personal-data');
-    // вставляем profileInteraction в конец profile
-    profile.append(profilePersonalData);
-    // наполняем элемент
-    profilePersonalData.innerHTML += profilePersonalDataElem();
+    profilePersonalData.innerHTML = profilePersonalDataElem();
 
-
-    const friends = document.querySelector('.friends');
     // Проверяем: существует ли элемент. Если нет, то создаём его.
-    friends.contains(document.getElementById('friends-list')) ?
-        document.getElementById('friends-list') :
-        friends.innerHTML += `<div id="friends-list" class="friends-list"></div>`;
-    // берём элемент
+    if (!profilePersonalData.contains(document.getElementById('hobby'))) {
+        profilePersonalData.innerHTML += hobbyContainer();
+    }
+    const hobby = document.querySelector('.hobby');
+    HOBBY_DATA.forEach(elem => hobby.append(hobbyElem(elem)));
+
+    const profileUsername = document.querySelector('.profile__username');
+    if (profileUsername) {
+        profileUsername.addEventListener('focusout', function() {
+            localStorage.setItem('username', this.innerHTML);
+        });
+        if (localStorage.getItem('username')) {
+            profileUsername.innerHTML = localStorage.getItem('username');
+        }
+    }
+
+    const mainSection = document.querySelector('.main-section');
+    if (!mainSection.contains(document.getElementById('sub-section__data'))) {
+        mainSection.innerHTML += subSectionItem();
+    }
+    const subSection = document.getElementById('sub-section__data');
+    subSection.append(subSectionPhoneNumber(PROFILE_DATA.phoneNumber));
+    subSection.append(subSectionEMail(PROFILE_DATA.eMail));
+
+    const phoneNumber = document.querySelector('#sub-section_phoneNumber');
+    if (phoneNumber) {
+        phoneNumber.addEventListener('focusout', function() {
+            localStorage.setItem('phoneNumber', this.innerHTML);
+        });
+        if (localStorage.getItem('phoneNumber')) {
+            phoneNumber.innerHTML = localStorage.getItem('phoneNumber');
+        }
+    }
+    const eMail = document.querySelector('#sub-section_e-mail');
+    if (eMail) {
+        eMail.addEventListener('focusout', function() {
+            localStorage.setItem('eMail', this.innerHTML);
+        });
+        if (localStorage.getItem('eMail')) {
+            eMail.innerHTML = localStorage.getItem('eMail');
+        }
+    }
+
+    let formInput = document.querySelector('.form-input');
+    let formButton = document.querySelector('#form-hobby__button');
+    formButton.onclick = event => {
+        event.preventDefault();
+        if (formInput.value.match('^[а-яА-ЯёЁa-zA-Z0-9]+$')) {
+            hobby.prepend(hobbyElem(formInput.value));
+            formInput.value = "";
+        }
+    }
+
     const friendsList = document.getElementById('friends-list');
-    // наполняем элемент
     FRIENDS_DATA.forEach(el => friendsList.innerHTML += friendsListItem(el));
     // For the scrollbar view. Эта мерзка небогоугодная вещь написана для того, чтобы показать красоту скроллбара.
     friendsList.innerHTML += friendsList.innerHTML + friendsList.innerHTML;
 
-    // Проверяем: существует ли элемент. Если нет, то создаём его.
-    profilePersonalData.contains(document.getElementById('#hobby')) ?
-        document.getElementById('#hobby') :
-        profilePersonalData.innerHTML += '<div id="hobby" class="hobby"></div>';
-    // переворачиваем массив
-    HOBBY_DATA.reverse();
-    // наполняем элемент
-    const hobby = document.querySelector('.hobby');
-    HOBBY_DATA.forEach(elem => hobby.innerHTML += hobbyElem(elem));
-
-
-    let form = document.querySelector('#form-hobby');
-    let formInput = document.querySelector('.form-input');
-    let formButton = document.querySelector('#form-hobby__button');
-    formInput.onchange = () => {
-        if (formInput.value !== "") {
-            console.log(`i'm here`);
-            return true;
-        }
-    };
-    formButton.onclick = event => {
-        event.preventDefault();
-        console.log(formInput.value);
-    }
 }
 
 
